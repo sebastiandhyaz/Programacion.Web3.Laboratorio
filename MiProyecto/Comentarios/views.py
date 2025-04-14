@@ -16,3 +16,6 @@ def verificar_numero(request, numero):
 def recibe_param(request, cadena, dato_num):
     # Usamos f-string para formatear la cadena correctamente
     return HttpResponse(f"Se recibió la cadena: {cadena} y el número: {dato_num}")
+
+def nombre(request):
+    return HttpResponse("¡Hola, este es el mensaje desde la vista 'nombre'!")
