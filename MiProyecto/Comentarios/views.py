@@ -13,8 +13,7 @@ def verificar_numero(request, numero):
         msg = "impar"
     return HttpResponse(msg)
 
-def recibe_param(request, cadena, dato_num):
-    # Usamos f-string para formatear la cadena correctamente
+icons    # Usamos f-string para formatear la cadena correctamente
     return HttpResponse(f"Se recibió la cadena: {cadena} y el número: {dato_num}")
 
 def nombre(request):
