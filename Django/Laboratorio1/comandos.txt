@@ -1,0 +1,37 @@
+Crear un entorno virtual
+
+Activarlo
+
+Crear un proyecto Django con manage.py
+
+Crear una app dentro del proyecto
+
+Aquí te dejo los pasos claritos y con comandos para hacerlo todo desde la terminal del Codespace 👇
+
+🧰 PASOS COMPLETOS
+✅ 1. Crear entorno virtual
+bash
+Copiar
+Editar
+python3 -m venv env
+✅ 2. Activar el entorno virtual
+bash
+Copiar
+Editar
+source env/bin/activate
+(Ahora verás que tu línea de comandos cambia, algo como (env) al principio)
+
+✅ 3. Instalar Django
+# pip install django
+✅ 4. Crear un proyecto Django
+# django-admin startproject mi_proyecto .
+El punto . al final es importante: le dice a Django que cree el proyecto en el directorio actual (no una carpeta nueva).
+
+✅ 5. Crear una app dentro del proyecto
+# python manage.py startapp mi_app
+✅ 6. Ejecutar el servidor para probar
+bash
+Copiar
+Editar
+# python manage.py runserver
+Luego abre el puerto que te muestra Codespaces (usualmente 8000) y verás la página de bienvenida de Django.
