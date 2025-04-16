@@ -8,6 +8,6 @@ urlpatterns = [
     path('', include('Comentarios.urls'), name='comentarios'),  # Corregido: usamos include para las URLs de 'Comentarios'
     path('nombre/', mi_app_views.saludo, name='nombre'),  # Cambiado de 'saludo' a 'nombre'
     #pah('coment/', Comentarios_views.coment, name='coment'),
-    #pth("verifica-numero/<int:numero>/", Comentarios_views.verificar_numero, name='verificar_numero'),
+    #path("verifica-numero/<int:numero>/", Comentarios_views.verificar_numero, name='verificar_numero'),
     #pth("vista-parametrizada/", Comentarios_views.recibe_param, name="vista-parametrizada"),
 ]
