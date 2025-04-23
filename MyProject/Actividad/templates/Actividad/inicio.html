@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Actividad - Programación - Web 3</title>
+    <style>
+        body {
+            background: #f0f2f5;
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            background: #fff;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+            border-radius: 12px;
+            padding: 40px 32px;
+            text-align: center;
+            min-width: 320px;
+        }
+        h1 {
+            margin-bottom: 24px;
+            color: #2d3a4b;
+        }
+        p {
+            font-size: 1.2em;
+            color: #444;
+            margin: 12px 0;
+        }
+        .info {
+            margin-top: 24px;
+            font-size: 1em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Actividad Programación 3</h1>
+        <p>Nombre del estudiante: {{ nombre_completo }}</p>
+        <div class="info">
+            <p>Carnet: {{ carnet }}</p>
+            <p>Fecha: {{ fecha_hoy }}</p>
+        </div>
+    </div>
+</body>
+</html>
