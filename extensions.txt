@@ -5,8 +5,6 @@ donjayamanne.python-extension-pack
 drewxs.tokyo-night-dark
 eamodio.gitlens
 enkia.tokyo-night
-equinusocio.vsc-material-theme-icons
-formulahendry.auto-rename-tag
 github.codespaces
 github.copilot
 github.copilot-chat
@@ -21,8 +19,8 @@ ms-python.vscode-pylance
 ms-vscode.azure-repos
 ms-vscode.live-server
 ms-vscode.remote-repositories
-njpwerner.autodocstring
 tabnine.tabnine-vscode
+vira.vsc-vira-theme
 visualstudioexptteam.intellicode-api-usage-examples
 visualstudioexptteam.vscodeintellicode
 wholroyd.jinja

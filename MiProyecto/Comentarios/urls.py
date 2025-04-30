@@ -1,8 +1,8 @@
 from django.urls import path
-from Comentarios import views as Comentarios_views
+from . import views
 
 urlpatterns = [
-    path('coment/', Comentarios_views.coment, name='coment'),
-    path("verifica-numero/<int:numero>/", Comentarios_views.verificar_numero, name='verificar_numero'),  # Corregido
-    path("vista-parametrizada/", Comentarios_views.recibe_param, name="vista-parametrizada")
+    path('coment/', views.coment, name='coment'),
+    path('verificar-numero/<int:numero>/', views.verificar_numero, name='verificar_numero'),
+    path("vista-parametrizada/", views.mostrar_datos, name="vista-parametrizada"),  # Cambiado a 'mostrar_datos'
 ]

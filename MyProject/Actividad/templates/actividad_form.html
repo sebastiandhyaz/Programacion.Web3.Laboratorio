@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario de Actividad</title>
+</head>
+<body>
+    <h1>Datos Personales</h1>
+    <form method="post">
+        {% csrf_token %}
+        <!-- Aquí estaba el formulario con nombre, CI, etc. -->
+        {{ form_datos_personales.as_p }}
+        <button type="submit">Guardar Datos</button>
+    </form>
+
+    <h1>Formulario de Actividad</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{% extends 'principal/base.html' %}
+
+{% block title %}Formulario WEB{% endblock %}
+
+{% block content %}
+    <h2>Formulario WEB</h2>
+    <form method="post">
+        {% csrf_token %}
+        <p><strong>Nombre:</strong> {{ form.nombre }}</p>
+        <p><strong>Dirección e-mail:</strong> {{ form.correo }}</p>
+        <p><strong>Ciudad:</strong> {{ form.ciudad }}</p>
+        <p><strong>Aficiones:</strong> {{ form.aficiones }}</p>
+        <p><strong>Sexo:</strong> {{ form.sexo }}</p>
+        <button type="submit">Enviar formulario</button>
+        <button type="reset">Limpiar formulario</button>
+    </form>
+{% endblock %}

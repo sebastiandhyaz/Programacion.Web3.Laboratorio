@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Nuevo Usuario</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f9f9f9;
+        }
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            width: 300px;
+        }
+        h1, h2, h3 {
+            text-align: center;
+        }
+        button {
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+        }
+        button:hover {
+            box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <form method="post">
+        <h1>PROYECTO DJANGO</h1>
+        <h2>MODULO - USUARIOS</h2>
+        <h3>FORMULARIO NUEVO USUARIO</h3>
+        {% csrf_token %} <!-- Asegurarse de incluir el token CSRF -->
+        <p><strong>Nombre:</strong> {{ form.nombre }}</p>
+        <p><strong>Apellido:</strong> {{ form.apellido }}</p>
+        <p><strong>Fecha de nacimiento:</strong> {{ form.fecha_dia }} {{ form.fecha_mes }} {{ form.fecha_anio }}</p>
+        <p><strong>Género:</strong> {{ form.genero }}</p>
+        <p><strong>Contraseña:</strong> {{ form.password }}</p>
+        <button type="submit">Registrar</button>
+        <button type="reset">Limpiar</button>
+    </form>
+</body>
+</html>

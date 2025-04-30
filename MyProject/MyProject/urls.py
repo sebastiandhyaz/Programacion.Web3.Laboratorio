@@ -1,8 +1,7 @@
 from django.contrib import admin
 from django.urls import path, include
-from django.views.generic import TemplateView
 
 urlpatterns = [
-    path("admin/", admin.site.urls),
-    path('actividad/', include('Actividad.urls')),
+    path('admin/', admin.site.urls, name='admin'),
+    path('actividad/', include('Actividad.urls')),  # Incluye las URLs de la app Actividad
 ]
