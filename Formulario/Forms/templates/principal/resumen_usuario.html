@@ -4,19 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resumen de Datos</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f9f9f9;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            width: 300px;
+        }
+        h1, h2, h3 {
+            text-align: center;
+        }
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <h1>PROYECTO DJANGO</h1>
-    <h2>MODULO - USUARIOS</h2>
-    <h3>DATOS DE USUARIO</h3>
-    <p><strong>Nombre:</strong> {{ nombre }}</p>
-    <p><strong>Apellido:</strong> {{ apellido }}</p>
-    <p><strong>Fecha de nacimiento:</strong> {{ fecha_nacimiento }}</p>
-    <p><strong>Género:</strong> {{ genero }}</p>
-    <p><strong>Clave:</strong> {{ password }}</p>
-    <a href="{% url 'nuevo_usuario' %}">Registrar nuevo usuario</a>
-    <footer>
-        <p>Programacion web - @2005</p>
-    </footer>
+    <div class="container">
+        <h1>PROYECTO DJANGO</h1>
+        <h2>MODULO - USUARIOS</h2>
+        <h3>DATOS DE USUARIO</h3>
+        <p><strong>Nombre:</strong> {{ nombre }}</p>
+        <p><strong>Apellido:</strong> {{ apellido }}</p>
+        <p><strong>Fecha de nacimiento:</strong> {{ fecha_nacimiento }}</p>
+        <p><strong>Género:</strong> {{ genero }}</p>
+        <p><strong>Correo Electrónico:</strong> {{ email }}</p>
+        <p><strong>Aficiones:</strong> {{ aficiones|join:", " }}</p>
+        <p><strong>Clave:</strong> {{ password }}</p>
+        <a href="{% url 'nuevo_usuario' %}">Registrar nuevo usuario</a>
+    </div>
 </body>
 </html>

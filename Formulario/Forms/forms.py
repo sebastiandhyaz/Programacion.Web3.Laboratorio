@@ -26,3 +26,13 @@ class FormularioNuevoUsuario(forms.Form):
         label="Género"
     )
     password = forms.CharField(widget=forms.PasswordInput, label="Contraseña")
+    email = forms.EmailField(max_length=100, label="Correo Electrónico")
+    aficiones = forms.MultipleChoiceField(
+        choices=[
+            ('deportes', 'Deportes'),
+            ('coches', 'Coches'),
+            ('musica', 'Música')
+        ],
+        widget=forms.CheckboxSelectMultiple,
+        label="Aficiones"
+    )
