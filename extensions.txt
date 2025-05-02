@@ -1,4 +1,5 @@
 Extensiones instaladas en Codespaces: opulent space bassoon:
+alexcvzz.vscode-sqlite
 batisteo.vscode-django
 donjayamanne.python-environment-manager
 donjayamanne.python-extension-pack
@@ -19,8 +20,8 @@ ms-python.vscode-pylance
 ms-vscode.azure-repos
 ms-vscode.live-server
 ms-vscode.remote-repositories
+qwtel.sqlite-viewer
 tabnine.tabnine-vscode
-vira.vsc-vira-theme
 visualstudioexptteam.intellicode-api-usage-examples
 visualstudioexptteam.vscodeintellicode
 wholroyd.jinja
