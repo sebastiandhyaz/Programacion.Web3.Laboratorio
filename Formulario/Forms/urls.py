@@ -1,8 +1,7 @@
 from django.urls import path
-from .views import nuevo_usuario
-from .views import usuarios  # Importar la vista usuarios
+from . import views  # Asegúrate de importar las vistas correctamente
 
 urlpatterns = [
-    path('nuevo_usuario/', nuevo_usuario, name='nuevo_usuario'),  # Ruta para nuevo_usuario
-    path('usuarios/', usuarios, name='usuarios'),  # Nueva ruta para usuarios
+    path('nuevo_usuario/', views.nuevo_usuario, name='nuevo_usuario'),  # Ruta para nuevo_usuario
+    path('usuarios/', views.usuarios, name='usuarios'),  # Corrige la referencia a la vista
 ]

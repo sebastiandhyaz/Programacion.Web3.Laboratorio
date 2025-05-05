@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-(qs@hist*m^jlyjd*&d@c-v443^u96@(id7))7i+24y-p14@+r"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False  # Cambiar a False en producción
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["127.0.0.1", "localhost", "tu-dominio.com"]  # Agregar dominios locales y de producción
 
 
 # Application definition
@@ -103,9 +103,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
 
-LANGUAGE_CODE = "en-us"
+LANGUAGE_CODE = "es-es"  # Cambiar a español
 
-TIME_ZONE = "UTC"
+TIME_ZONE = "America/Mexico_City"  # Cambiar a la zona horaria deseada
 
 USE_I18N = True
 
@@ -124,5 +124,6 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 CSRF_TRUSTED_ORIGINS = [
     "http://127.0.0.1:8000",
-    "https://localhost:8000",
+    "http://localhost:8000",  # Asegúrate de que coincida con la URL que usas
+    "https://tu-dominio.com",  # Agregar dominio de producción si aplica
 ]

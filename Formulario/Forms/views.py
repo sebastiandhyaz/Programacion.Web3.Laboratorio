@@ -1,6 +1,14 @@
 from django.shortcuts import render
 from .forms import FormularioNuevoUsuario
 
+# Asegúrate de que 'usuarios' esté definido o importado correctamente
+# Si 'usuarios' es una función o variable, defínela o impórtala desde el módulo correcto
+# Ejemplo de definición:
+usuarios = []  # Si 'usuarios' es una lista o colección
+
+# Si 'usuarios' debe ser importado desde otro archivo, corrige la importación:
+# from .otro_modulo import usuarios
+
 def nuevo_usuario(request):
     if request.method == 'POST':
         form = FormularioNuevoUsuario(request.POST)
@@ -36,3 +44,7 @@ def nuevo_usuario(request):
         # Renderizar el formulario vacío en solicitudes GET
         form = FormularioNuevoUsuario()
         return render(request, 'principal/formulario_usuario.html', {'form': form})
+
+def usuarios(request):
+    # Lógica para manejar la vista de usuarios
+    return render(request, 'principal/usuarios.html')  # Asegúrate de tener esta plantilla
