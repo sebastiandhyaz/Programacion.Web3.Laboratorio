@@ -16,7 +16,7 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from django.http import HttpResponse
 
 def home(request):
@@ -25,5 +25,6 @@ def home(request):
 urlpatterns = [
     path("", home, name="home"),  # Ruta para la página principal
     path("admin/", admin.site.urls),
-    # Aquí puedes agregar rutas adicionales si las aplicaciones tienen sus propias URLs.
+    path("usuarios/", include("Users.urls")),  # Incluir las rutas de usuarios
+    path("publicaciones/", include("publicaciones.urls")),  # Incluir las rutas de publicaciones
 ]
